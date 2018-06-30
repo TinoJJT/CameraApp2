@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KameraAppi2</string>
+    <string name="welcome">Tervetuloa KameraAppi2:seen!</string>
+    <string name="take_picture">Ota kuva</string>
+    <string name="edit_photo">Muokkaa kuvaa</string>
+    <string name="saved">Tallennettu: </string>
+    <string name="save_short">Tallen</string>
+    <string name="add_picture_short">+Kuva</string>
+    <string name="add_text_short">+Teksti</string>
+    <string name="filter_short">Filtteri</string>
+    <string name="draw_short">Piirrä</string>
+    <string name="size">Koko</string>
+    <string name="opacity">Opasiteetti</string>
+    <string name="write_text_hint">Kirjoita teksti tähän</string>
+    <string name="add_text_to_image">Lisää teksti kuvaan</string>
+    <string name="select_picture">Valitse kuva</string>
+    <string name="request_permission">Kameran käyttö vaati luvan annon.</string>
+    <string name="camera_error">Tämä laite ei tue CAMERA2 API:ta</string>
+    <string name="save_and_wallpaper">Tallenna ja aseta taustakuvaksi</string>
+    <string name="cancel">Peruuta</string>
+    <string name="just_save">Vain tallennus</string>
+    <string name="select_save">Valitse vaihtoehto</string>
+</resources>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">CameraApp2</string>
+    <string name="welcome">Welcome to CameraApp2!</string>
+    <string name="take_picture">Take picture</string>
+    <string name="edit_photo">Edit photo</string>
+    <string name="saved">Saved: </string>
+    <string name="save_short">Save</string>
+    <string name="add_picture_short">+Pic</string>
+    <string name="add_text_short">+Text</string>
+    <string name="filter_short">Filter</string>
+    <string name="draw_short">Draw</string>
+    <string name="size">Size</string>
+    <string name="opacity">Opacity</string>
+    <string name="write_text_hint">Write text here</string>
+    <string name="add_text_to_image">Add Text to image</string>
+    <string name="select_picture">Select Picture</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+    <string name="camera_error">This device doesn\\\'t support Camera2 API.</string>
+    <string name="save_and_wallpaper">Save and set as wallpaper</string>
+    <string name="cancel">cancel</string>
+    <string name="just_save">Just save</string>
+    <string name="select_save">Select option</string>
+</resources>

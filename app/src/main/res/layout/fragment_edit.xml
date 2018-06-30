@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/squareGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.635" />
+
+    <ja.burhanrashid52.photoeditor.PhotoEditorView
+        android:id="@+id/photoEditorView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@id/squareGuideLine"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/brushToolBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/drawButton"
+        app:layout_constraintTop_toBottomOf="@id/photoEditorView">
+
+        <TextView
+            android:id="@+id/sizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/size"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="@id/brushSizePicker"
+            app:layout_constraintRight_toRightOf="@id/brushSizePicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <NumberPicker
+            android:id="@+id/brushSizePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sizeTextView" />
+
+        <TextView
+            android:id="@+id/opacityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@android:color/holo_blue_light"
+            android:text="@string/opacity"
+            android:textSize="25sp"
+            app:layout_constraintLeft_toLeftOf="@id/opacityPicker"
+            app:layout_constraintRight_toRightOf="@id/opacityPicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <NumberPicker
+            android:id="@+id/opacityPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/holo_blue_light"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/opacityTextView" />
+
+        <Button
+            android:id="@+id/whiteButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/brushSizePicker"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/blackButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/black"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/whiteButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/blueButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/blue_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/blackButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/skyBlueButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/sky_blue_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/blueButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/brownButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/brown_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/brushSizePicker"
+            app:layout_constraintTop_toBottomOf="@id/whiteButton" />
+
+        <Button
+            android:id="@+id/orangeButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/orange_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/brownButton"
+            app:layout_constraintTop_toBottomOf="@id/whiteButton" />
+
+        <Button
+            android:id="@+id/redButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/red_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/orangeButton"
+            app:layout_constraintTop_toBottomOf="@id/whiteButton" />
+
+        <Button
+            android:id="@+id/violetButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/violet_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/redButton"
+            app:layout_constraintTop_toBottomOf="@id/whiteButton" />
+
+        <Button
+            android:id="@+id/yellowButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/yellow_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/brushSizePicker"
+            app:layout_constraintTop_toBottomOf="@id/brownButton" />
+
+        <Button
+            android:id="@+id/yellowGreenButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/yellow_green_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/yellowButton"
+            app:layout_constraintTop_toBottomOf="@id/brownButton" />
+
+        <Button
+            android:id="@+id/greenButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/green_color_picker"
+            android:foreground="@drawable/black_border"
+            app:layout_constraintLeft_toRightOf="@id/yellowGreenButton"
+            app:layout_constraintTop_toBottomOf="@id/brownButton" />
+
+        <ImageButton
+            android:id="@+id/eraseButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:foreground="@drawable/black_border"
+            android:src="@drawable/eraser_image"
+            app:layout_constraintLeft_toRightOf="@id/greenButton"
+            app:layout_constraintTop_toBottomOf="@id/brownButton" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/textToolBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/drawButton"
+        app:layout_constraintTop_toBottomOf="@id/squareGuideLine">
+
+        <EditText
+            android:id="@+id/editInputText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/write_text_hint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/addTextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_text_to_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/filterToolBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/colorPrimary"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/drawButton"
+        app:layout_constraintTop_toBottomOf="@id/photoEditorView">
+
+        <ImageView
+            android:id="@+id/noFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/no_filter"
+            app:layout_constraintBottom_toTopOf="@id/greyFilter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/sepiaFilter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/greyFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/gray_scale"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/contrastFilter"
+            app:layout_constraintTop_toBottomOf="@id/noFilter" />
+
+        <ImageView
+            android:id="@+id/sepiaFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/sepia"
+            app:layout_constraintBottom_toTopOf="@id/contrastFilter"
+            app:layout_constraintLeft_toRightOf="@id/noFilter"
+            app:layout_constraintRight_toLeftOf="@id/saturateFilter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/contrastFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/contrast"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/greyFilter"
+            app:layout_constraintRight_toLeftOf="@id/temperatureFilter"
+            app:layout_constraintTop_toBottomOf="@id/sepiaFilter" />
+
+        <ImageView
+            android:id="@+id/saturateFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/saturate"
+            app:layout_constraintBottom_toTopOf="@id/temperatureFilter"
+            app:layout_constraintLeft_toRightOf="@id/sepiaFilter"
+            app:layout_constraintRight_toLeftOf="@id/posterizeFilter"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/temperatureFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/temperature"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/contrastFilter"
+            app:layout_constraintRight_toLeftOf="@id/vignetteFilter"
+            app:layout_constraintTop_toBottomOf="@id/saturateFilter" />
+
+        <ImageView
+            android:id="@+id/posterizeFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/posterize"
+            app:layout_constraintBottom_toTopOf="@id/vignetteFilter"
+            app:layout_constraintLeft_toRightOf="@id/saturateFilter"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/vignetteFilter"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vignette"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/temperatureFilter"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/posterizeFilter" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/drawButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/draw_short"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/filterButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/filterButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_short"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/drawButton" />
+
+    <Button
+        android:id="@+id/textButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_text_short"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/pictureButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/filterButton" />
+
+    <Button
+        android:id="@+id/pictureButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_picture_short"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textButton" />
+
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/save_short"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pictureButton" />
+
+
+</android.support.constraint.ConstraintLayout>
